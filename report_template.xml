@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <title>Applitools batch(es) summary report $title</title>
+  <metadata charset="utf-8" viewport="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- External resources can be linked but will have to be processed separately -->
+  <resources>
+    <stylesheet href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" />
+    <!-- ... Other linked scripts and styles ... -->
+  </resources>
+
+  <nav>
+    <brand href="https://applitools.com">
+      <img src="http://applitools.com/images/applitools.png" />
+    </brand>
+    <navbar id="navbarNav">
+      <item type="active">
+        <link href="#">$title Batches summary report</link>
+      </item>
+    </navbar>
+  </nav>
+
+  <main>
+    <section>
+      <heading>hello world</heading>
+    </section>
+  </main>
+
+  <!-- Google Chart Data -->
+  <chartData>
+    <batches>
+      <item name="Failed">$batches.batchesFailed</item>
+      <item name="Passed">$batches.batchesPassed</item>
+      <item name="Unresolved">$batches.batchesUnresolved</item>
+      <item name="Running">$batches.batchesRunning</item>
+    </batches>
+
+    <tests>
+      <item name="Failed">$batches.testsFailed</item>
+      <item name="Passed">$batches.testsPassed</item>
+      <item name="Unresolved">$batches.testsUnresolved</item>
+      <item name="Running">$batches.testsRunning</item>
+    </tests>
+
+    <steps>
+      <item name="Mismatched">$batches.StepsMismatched</item>
+      <item name="Matched">$batches.StepsMatched</item>
+      <item name="New">$batches.StepsNew</item>
+      <item name="Missing">$batches.StepsMissing</item>
+    </steps>
+  </chartData>
+</report>
